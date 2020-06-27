@@ -106,13 +106,13 @@ When you connect to the TCP interface of the **Auditor**, you should receive an 
 |Question | How can we represent the system in an **architecture diagram**, which gives information both about the Docker containers, the communication protocols and the commands? |
 | | *Insert your diagram here...* |
 |Question | Who is going to **send UDP datagrams** and **when**? |
-| | *Enter your response here...* |
+| | *The musicians will send datagrams representing the "sounds" they emit* |
 |Question | Who is going to **listen for UDP datagrams** and what should happen when a datagram is received? |
-| | *Enter your response here...* |
+| | *The auditor will listen for the "sounds" the musicians make and update its array accordingly : add the musician if not already present It should also send and ACK datagram to the musician to confirm.* |
 |Question | What **payload** should we put in the UDP datagrams? |
-| | *Enter your response here...* |
+| | *The musician's ID, the sound it makes, a transmission ID* |
 |Question | What **data structures** do we need in the UDP sender and receiver? When will we update these data structures? When will we query these data structures? |
-| | *Enter your response here...* |
+| | *The musicians will know their own ID and the sound they make. The auditor on the other hand will have an array (map ?) of musician infos, containing the last transmission for every musician* |
 
 
 ## Task 2: implement a "musician" Node.js application
@@ -120,15 +120,15 @@ When you connect to the TCP interface of the **Auditor**, you should receive an 
 | #  | Topic |
 | ---  | --- |
 |Question | In a JavaScript program, if we have an object, how can we **serialize it in JSON**? |
-| | *Enter your response here...*  |
+| | *We can use JSON.Stringify(object) to serialize an object.*  |
 |Question | What is **npm**?  |
-| | *Enter your response here...*  |
+| | *npm is the package manager for node.js. It is used to easily install dependencies for node scripts*  |
 |Question | What is the `npm install` command and what is the purpose of the `--save` flag?  |
-| | *Enter your response here...*  |
+| | *npm install installs a package to be used as a dependency. Originally, the --save flag was used so you didn't have to manually add the dependency in your "package.json" file, however it is no longer needed after npm 5.0*  |
 |Question | How can we use the `https://www.npmjs.com/` web site?  |
-| | *Enter your response here...*  |
+| | *It serves as a repository for npm packages*  |
 |Question | In JavaScript, how can we **generate a UUID** compliant with RFC4122? |
-| | *Enter your response here...*  |
+| | *the npm package "uuid" allows for the creation of RFC4122 UUIDs*  |
 |Question | In Node.js, how can we execute a function on a **periodic** basis? |
 | | *Enter your response here...*  |
 |Question | In Node.js, how can we **emit UDP datagrams**? |
